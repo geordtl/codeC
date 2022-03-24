@@ -79,5 +79,38 @@ int main(void){
     if(num % 7 != 0){
         printf("Não é múltiplo!\n");
     } */
+
+    float x, y, z, menor, mediano, maior;
+    printf("Informe três números:\n");
+    scanf("%f %f %f", &x, &y, &z);
+    menor = x;
+    maior = y;
+    mediano = z;
+
+    if(y<menor){
+        menor = y;
+    }
+    if(z<menor){
+        menor = z;
+    }
+    if(x>maior){
+        maior = x;
+    }
+    if(z>maior){
+        maior = z;
+    }
+
+    if(x > menor && x < maior){
+        mediano = x;
+    }
+    if(y > menor && y < maior){
+        mediano = y;
+    }
+
+    x = menor;
+    y = mediano;
+    z = maior;
+
+    printf("O menor número é: %0.2f, o mediano é: %0.2f, e o maior é: %0.2f: ", menor, mediano, maior);
     return 0;
 }
