@@ -1,6 +1,24 @@
 #include <stdio.h>
 
 int main(void){
+    /*
+    float x, y, distancia, tempo1, tempo2;
+    x = 60;
+    y = 90;
+    scanf("%f", &distancia);
+    tempo1 = distancia/x;
+    tempo2 = distancia/y;
+    printf("O carro X gastará %.2f horas, e o Y %.2f horas\n", tempo1, tempo2);
+    
+    /*
+    int a, b, c, D, S, R;
+    scanf("%d %d %d", &a, &b, &c);
+    R = (a + b) * (a + b);
+    S = (b + c) * (b + c);
+    D = (R + S)/2;
+    printf("%d", D); */
+
+    
     /* 
     EXERCÍCIO 1
 
@@ -78,7 +96,7 @@ int main(void){
     }
     if(num % 7 != 0){
         printf("Não é múltiplo!\n");
-    } */
+    }
 
     float x, y, z, menor, mediano, maior;
     printf("Informe três números:\n");
@@ -112,5 +130,6 @@ int main(void){
     z = maior;
 
     printf("O menor número é: %0.2f, o mediano é: %0.2f, e o maior é: %0.2f: ", menor, mediano, maior);
+    */
     return 0;
 }
