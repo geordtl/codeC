@@ -1,6 +1,30 @@
 #include <stdio.h>
 
 int main(void){
+    int h, m, s, hf, mf, sf, horas, minutos, segundos, soma, somaf;
+    
+    scanf("%dh%dm%ds", &h, &m, &s);
+    scanf("%dh%dm%ds", &hf, &mf, &sf);
+    horas = (hf - h);
+    minutos = (mf - m);
+    segundos = (sf - s);
+    
+    soma = (h*3600) + (m*60) + s;
+    somaf = (hf*3600) + (mf*60) + sf;
+    
+        if((somaf - soma) > 0){
+        printf("%dh%dm%ds", horas, minutos, segundos);
+        }
+        if((somaf - soma) <= 0){
+            horas = 24 - (-(hf - h));
+            if(horas <= 24){
+                minutos = minutos;
+                segundos = segundos;
+                printf("%dh%dm%ds", horas, minutos, segundos);
+            }
+        }  
+
+
     /*
     float x, y, distancia, tempo1, tempo2;
     x = 60;
@@ -10,7 +34,6 @@ int main(void){
     tempo2 = distancia/y;
     printf("O carro X gastará %.2f horas, e o Y %.2f horas\n", tempo1, tempo2);
     
-    /*
     int a, b, c, D, S, R;
     scanf("%d %d %d", &a, &b, &c);
     R = (a + b) * (a + b);
