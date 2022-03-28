@@ -1,28 +1,29 @@
 #include <stdio.h>
 
 int main(void){
-    int h, m, s, hf, mf, sf, horas, minutos, segundos, soma, somaf;
+    int h, m, s, hf, mf, sf, horas, minutos, segundos, total;
     
     scanf("%dh%dm%ds", &h, &m, &s);
     scanf("%dh%dm%ds", &hf, &mf, &sf);
-    horas = (hf - h);
-    minutos = (mf - m);
-    segundos = (sf - s);
     
-    soma = (h*3600) + (m*60) + s;
-    somaf = (hf*3600) + (mf*60) + sf;
-    
-        if((somaf - soma) > 0){
-        printf("%dh%dm%ds", horas, minutos, segundos);
-        }
-        if((somaf - soma) <= 0){
-            horas = 24 - (-(hf - h));
-            if(horas <= 24){
-                minutos = minutos;
-                segundos = segundos;
-                printf("%dh%dm%ds", horas, minutos, segundos);
-            }
-        }  
+    if(hf <= h){
+        total = (((hf*3600) + (mf*60) + sf) + (24*3600))- ((h*3600) + (m*60) + s);
+    }
+    if(hf > h){
+        total = ((hf*3600) + (mf*60) + sf) - ((h*3600) + (m*60) + s);
+    }
+    if(mf > m){
+        total = ((hf*3600) + (mf*60) + sf) - ((h*3600) + (m*60) + s);
+    }
+    if(sf > s){
+        total = ((hf*3600) + (mf*60) + sf) - ((h*3600) + (m*60) + s);
+    }
+    horas = total/3600;
+    total = total%3600;
+    minutos = total/60;
+    segundos = total%60;
+    printf("%dh%dm%ds", horas, minutos, segundos);
+
 
 
     /*
