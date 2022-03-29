@@ -8,7 +8,6 @@ int main(void){
     scanf("%d", &diaf);
     scanf("%dh%dm%ds", &hf, &mf, &sf);
     
-    
     if(diaf < dia){
         total = ((diaf*86400) + (31*86400) + (hf*3600) + (mf*60) + sf + (24*3600)) - ((dia*86400)+ (h*3600) + (m*60) + s);
     }
@@ -25,7 +24,7 @@ int main(void){
     } 
 
     dias = total/86400;
-    horas = total/3600;
+    horas = total%24;
     total = total%3600;
     minutos = total/60;
     segundos = total%60;
