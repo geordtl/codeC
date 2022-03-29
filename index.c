@@ -24,12 +24,8 @@ int main(void){
     } 
 
     dias = total/86400;
-    if(hf > h){
-        horas = total%24;
-    }
-    if(hf < h){
-        horas = total/24;
-    }
+    if(hf < )
+    horas = total/3600;
     total = total%3600;
     minutos = total/60;
     segundos = total%60;
