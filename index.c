@@ -1,28 +1,28 @@
 #include <stdio.h>
 
 int main(void){
+    
     int dia, h, m, s, diaf, hf, mf, sf, dias, horas, minutos, segundos, total;
     scanf("%d", &dia);
     scanf("%dh%dm%ds", &h, &m, &s);
     scanf("%d", &diaf);
     scanf("%dh%dm%ds", &hf, &mf, &sf);
     
-    /*
-    if(hf <= h){
-        total = (((diaf*86.400) + (hf*3600) + (mf*60) + sf) + (24*3600)) - ((dia*86.400)+ (h*3600) + (m*60) + s);
-    }
-    */
     
-    if(diaf > dia){
+    if(diaf < dia){
+        total = ((diaf*86400) + (31*86400) + (hf*3600) + (mf*60) + sf + (24*3600)) - ((dia*86400)+ (h*3600) + (m*60) + s);
+    }
+    
+    if(hf > h || diaf > dia){
         total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
     }
-    /*
+    
     if(mf > m){
-        total = ((diaf*86.400) + (hf*3600) + (mf*60) + sf) - ((dia*86.400) + (h*3600) + (m*60) + s);
+        total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
     }
     if(sf > s){
-        total = ((diaf*86.400) + (hf*3600) + (mf*60) + sf) - ((dia*86.400) + (h*3600) + (m*60) + s);
-    } */
+        total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
+    } 
 
     dias = total/86400;
     horas = total/3600;
@@ -31,9 +31,8 @@ int main(void){
     segundos = total%60;
     printf("%d d %d h %d m %d s", dias, horas, minutos, segundos);
 
+/*
 
-
-    /*
     float x, y, distancia, tempo1, tempo2;
     x = 60;
     y = 90;
