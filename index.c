@@ -1,35 +1,28 @@
 #include <stdio.h>
 
 int main(void){
-    
-    int dia, h, m, s, diaf, hf, mf, sf, dias, horas, minutos, segundos, total;
-    scanf("%d", &dia);
-    scanf("%dh%dm%ds", &h, &m, &s);
-    scanf("%d", &diaf);
-    scanf("%dh%dm%ds", &hf, &mf, &sf);
-    
-    if(diaf < dia){
-        total = ((diaf*86400) + (31*86400) + (hf*3600) + (mf*60) + sf + (24*3600)) - ((dia*86400)+ (h*3600) + (m*60) + s);
-    }
-    
-    if(hf > h || diaf > dia){
-        total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
-    }
-    
-    if(mf > m){
-        total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
-    }
-    if(sf > s){
-        total = ((diaf*86400) + (hf*3600) + (mf*60) + sf) - ((dia*86400) + (h*3600) + (m*60) + s);
-    } 
+   int dia, mes, ano, bissexto, totalDias;
 
-    dias = total/86400;
-    if(hf < )
-    horas = total/3600;
-    total = total%3600;
-    minutos = total/60;
-    segundos = total%60;
-    printf("%d d %d h %d m %d s", dias, horas, minutos, segundos);
+   scanf("%d/%d/%d", &dia, &mes, &ano);
+   bissexto = ano%400;
+   
+   if(bissexto == 0){
+       if(mes == 2){
+           totalDias = dia + 28;
+       }
+       printf("%d", totalDias);
+   }
+   if(bissexto != 0){
+    if(mes == 2){
+        totalDias = dia + 28;
+    }
+
+    if(mes > 2){
+        totalDias = (31 * mes) - 3;
+    }
+
+    printf("%d", totalDias);
+   }
 
 /*
 
