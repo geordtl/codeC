@@ -1,6 +1,35 @@
 #include <stdio.h>
 
 int main(void){
+    int n1, n2, opcao;
+    float media, soma, resto, q1, q2;
+
+    scanf("%d %d", &n1, &n2);
+    scanf("%d", &opcao);
+
+    switch(opcao){
+        case 1: 
+            media = (n1+n2)/2;
+            printf("A média é: %f", media);
+        break;
+        case 2: 
+            q1 = (n1*n1);
+            q2 = (n2*n2);
+            soma = q1 + q2;
+            printf("A soma dos quadrados dos números: %f", soma);
+        break;
+        case 3: 
+            resto = n1%n2;
+            printf("O resto da divisão do primeiro pelo segundo é: %f", resto);
+        break;
+        default: 
+            printf("A mensagem de erro.");
+        break;
+    }
+
+    
+
+    /*
     float peso, g;
     int planeta;
 
@@ -41,7 +70,8 @@ int main(void){
             printf("Planeta: Urano, Peso: %f", peso);
         break;
     }
-/*
+
+
    int dia, mes, ano, bissexto, totalDias;
 
    scanf("%d/%d/%d", &dia, &mes, &ano);
