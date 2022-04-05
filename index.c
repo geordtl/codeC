@@ -1,6 +1,47 @@
 #include <stdio.h>
 
 int main(void){
+    float peso, g;
+    int planeta;
+
+    printf("Qual o seu peso?\n");
+    scanf("%f", &peso);
+    printf("Escolha um planeta e informe o número correspondente: 1 - Mercurio, 2 - Venus, 3 - Marte, 4 - Jupiter, 5 - Saturno, 6 - Urano \n");
+    scanf("%d", &planeta);
+
+    switch(planeta){
+        case 1: 
+            g = 3.7;
+            peso = (peso/10) *  g;
+            printf("Planeta: Mercúrio, Peso: %f", peso);
+        break;
+        case 2:
+            g = 8.8;
+            peso = (peso/10) *  g;
+            printf("Planeta: Vênus, Peso: %f", peso);
+        break;
+        case 3:
+            g = 3.8;
+            peso = (peso/10) *  g;
+            printf("Planeta: Marte, Peso: %f", peso);
+        break;
+        case 4:
+            g = 26.4;
+            peso = (peso/10) *  g;
+            printf("Planeta: Júpiter, Peso: %f", peso);
+        break;
+        case 5:
+            g = 11.5;
+            peso = (peso/10) *  g;
+            printf("Planeta: Saturno, Peso: %f", peso);
+        break;
+        case 6:
+            g = 11.7;
+            peso = (peso/10) *  g;
+            printf("Planeta: Urano, Peso: %f", peso);
+        break;
+    }
+/*
    int dia, mes, ano, bissexto, totalDias;
 
    scanf("%d/%d/%d", &dia, &mes, &ano);
@@ -24,7 +65,6 @@ int main(void){
     printf("%d", totalDias);
    }
 
-/*
 
     float x, y, distancia, tempo1, tempo2;
     x = 60;
