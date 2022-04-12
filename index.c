@@ -1,6 +1,70 @@
 #include <stdio.h>
 
 int main(void){
+    int a, b, x, i, soma;
+    scanf("%d %d %d", &a, &b, &x);
+    soma = 0;
+
+    for(i = a; i <= b; i++){
+        if(i%x == 0){
+            soma += i;
+        }
+    }
+
+    printf("A soma dos números múltiplos de %d é: %d", x, soma);
+
+    /*
+    int n, i, fatorial;
+    scanf("%d", &n);
+    fatorial = 1;
+
+    for(i = 1; i <= n; i++){
+        fatorial = fatorial * i;
+    }
+    printf("%d\n", fatorial);
+
+    
+    int n, i, soma;
+    scanf("%d", &n);
+    soma = 0;
+    
+    for(i = 1; i <= n; i++){
+        soma = soma + i;  
+    }
+    printf("%d\n", soma);
+
+    int x, n, i, valor;
+    scanf("%d %d", &x, &n);
+    valor = 1;
+
+    for(i = 1; i <= n; i++){
+        valor *= x;
+    }
+    printf("%d", valor);
+
+    
+    int num, i, valor;
+    scanf("%d", &num);
+    valor = 1;
+
+    for(i = 1; i <= 10; i++){
+        valor *= num;
+    }
+    printf("%d", valor);
+
+
+
+    int i, soma;
+    soma = 0;
+
+    for(i = 100; i <= 200; i++){
+        if(i%2 == 0){
+            soma = soma + i;
+        }
+    }
+    printf("%d", soma);
+
+
     int n1, n2, opcao;
     float media, soma, resto, q1, q2;
 
@@ -28,8 +92,6 @@ int main(void){
     }
 
     
-
-    /*
     float peso, g;
     int planeta;
 
@@ -224,5 +286,6 @@ int main(void){
 
     printf("O menor número é: %0.2f, o mediano é: %0.2f, e o maior é: %0.2f: ", menor, mediano, maior);
     */
-    return 0;
+
+return 0;
 }
